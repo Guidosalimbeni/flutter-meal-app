@@ -10,6 +10,7 @@ class CategoriesScreen extends StatelessWidget {
         title: const Text("Meal App"),
       ),
       body: GridView(
+        padding: const EdgeInsets.all(25),
         children: DUMMY_CATEGORIES
             .map((catData) => CategoryItem(
                   catData.title,
@@ -17,10 +18,11 @@ class CategoriesScreen extends StatelessWidget {
                 ))
             .toList(),
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-            maxCrossAxisExtent: 200,
-            childAspectRatio: 3 / 2,
-            crossAxisSpacing: 20,
-            mainAxisSpacing: 20),
+          maxCrossAxisExtent: 200,
+          childAspectRatio: 3 / 2,
+          crossAxisSpacing: 20,
+          mainAxisSpacing: 20,
+        ),
       ),
     );
   }
